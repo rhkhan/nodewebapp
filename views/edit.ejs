@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+<form action="/emp/edit" method="POST">
+  <input type="text" name="Id" value="<%= ss._id %>">
+  <input type="text" placeholder="first name" name="FirstName" value="<%=ss.FirstName %>">
+  <button type="submit">Submit</button>
+</form>
+  
+  </body>
+</html>

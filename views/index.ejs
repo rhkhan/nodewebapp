@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+	
+	<a href="/emp/create/"><h3>Create new employee</h3></a>
+	
+ <% for(var i=0; i<emplist.length; i++) {%>
+    <li class="quote">
+     
+		 <a href="/emp/edit/<%=emplist[i]._id%>">
+			<span><%= emplist[i].FirstName %></span>
+		 </a>
+		 Click Delete to delete record:
+		 	<a href="/emp/delete/<%=emplist[i]._id%>">
+				<span> Delete </span>
+			</a>
+	 
+    </li>
+  <% } %>
+  
+  </body>
+</html>
